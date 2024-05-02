@@ -1,0 +1,126 @@
+## ALL JSON REQUESTS AND RESPONSES ##
+
+Login: POST
+    REQUESTS
+        {
+            "login" : "SamH",
+            "password"  : "Test"
+        }
+
+    RESPONSES
+        {
+            "id": 2,
+            "firstName": "Sam",
+            "lastName": "Hill",
+            "error": ""
+        }
+
+Registration: POST
+    REQUESTS
+        {
+            "firstName": "Luckner",
+            "lastName": "Ablard",
+            "login": "lablard",
+            "password": "project-manager"
+        }
+
+    RESPONSES
+        {"{
+            "firstName": "Luckner",
+            "lastName": "Ablard",
+            "login": "lablard",
+            "paswword": "project-manager"
+        }"  "Username has been inserted"}
+
+DELETE: POST
+    REQUESTS
+        {
+            "firstName": "Sam",
+            "lastName": "Hill",
+            "userId": "1"
+        }
+    
+    RESPONSES
+        {
+            "result": "Contact has been deleted"
+        }
+
+AddContacts: POST
+    REQUESTS
+        {
+            "firstName": "John",
+            "lastName": "Doe",
+            "phone": "123-456-7890",
+            "email": "john.doe@example.com",
+            "userId": "123"
+        }
+
+    RESPONSES
+        {"{
+            "firstName": "John",
+            "lastName": "Doe",
+            "phone": "123-456-7890",
+            "email": "john.doe@example.com",
+            "userId": "123"
+        }"  "Contact has been added"}
+
+UpdateContacts: POST
+    REQUESTS
+        {
+            "firstName": "John",
+            "lastName": "Doe",
+            "phone": "1234567890",
+            "email": "john.doe@example.com",
+            "userId": "123"
+        }
+
+    RESPONSES
+        {"{
+            "firstName": "John",
+            "lastName": "Doe",
+            "phone": "1234567890",
+            "email": "john.doe@example.com",
+            "userId": "123"
+        }"  "Contact has been updated"}
+
+SearchContacts: POST
+    REQUESTS
+        {
+            "firstName": "Rick",
+            "lastName": "Lei",
+            "userId": "2"
+        }
+
+    RESPONSES
+        {
+            {
+                "FirstName": "Rick",
+                "LastName": "Leinecker",
+                "Phone": "4078230169",
+                "Email": "Richard.Leinecker@ucf.edu",
+                "UserID": "2",
+                "ID": "1"
+            },
+            {
+                "FirstName": "Sachin",
+                "LastName": "Mishra",
+                "Phone": "0123456789",
+                "Email": "sa402655@ucf.edu",
+                "UserID": "2",
+                "ID": "6"
+            }
+        }
+
+SearchContacts: POST
+    REQUESTS
+        {
+            "Login": "lablard",
+            "ID": "20"
+        }
+    RESPONSES
+        {
+            {
+                "Login": "lablard",
+                "ID": "20"
+            }
+        }
